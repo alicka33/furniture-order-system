@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zlecenie</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1 id="tableTitle" contenteditable="true">Zlecenie... </h1>
+    <table id="dynamicTable">
+        <thead>
+            <tr>
+                <!-- Tytuły kolumn -->
+                <th>Nazwa elementu</th>
+                <th>Materiał</th>
+                <th>Ilość</th>
+                <th>Grubość</th>
+                <th>Długość</th>
+                <th>Szerokość</th>
+                <th>Obrzeże (dół)</th>
+                <th>Obrzeże (góra)</th>
+                <th>Obrzeże (przód)</th>
+                <th>Obrzeże (tył)</th>
+                <th>Płyta m2</th>
+                <th>Faktor</th>
+                <th>Cena m2</th>
+                <th>Obrzeże mb</th>
+                <th>Cena mb</th>
+                <th>Materiał</th>
+                <th>Format</th>
+                <th>Obrzeże</th>
+                <th>Cena PLN</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Wiersz przykładowy -->
+                <td contenteditable="true"></td>
+                <td><input type="text" class="materialInput" list="materialsList" placeholder="Wpisz materiał..."></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="deleteBtn">Usuń</button></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- <tr>
+                <td>Opakowanie</td>
+                <td colspan="17"></td>
+            </tr>-->
+            <tr>
+                <td>Podsumowanie</td>
+                <td colspan="17"></td>
+                <td id="totalSum">0.00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Datalist for materials -->
+    <datalist id="materialsList"></datalist>
+
+    <!-- Przycisk do generowania CSV -->
+    <button id="generateCSVBtn">Generuj plik EXCEL</button>
+
+    <input type="file" id="importExcelBtn" accept=".xls,.xlsx">
+
+    <script src="script.js"></script>
+</body>
+</html>

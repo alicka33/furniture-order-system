@@ -1,0 +1,128 @@
+/* Ensure the body and title are styled correctly */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Ensures buttons are visible */
+    background-color: #f7f7f7; /* Light background color */
+    color: #333; /* Darker text color for better contrast */
+}
+
+h1#tableTitle {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    font-size: 26px; /* Slightly larger font size */
+    font-weight: 600; /* Bolder font weight for prominence */
+    color: #444; /* Softer title color */
+    text-align: left;
+    background-color: #e3f16ab1;
+}
+
+/* Make the table responsive */
+table {
+    width: calc(100% - 80px); /* Table takes full width of the screen */
+    border-collapse: collapse;
+    margin: 20px auto; /* Center the table and add spacing */
+    background-color: white; /* White background for the table */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures rounded corners affect content */
+}
+
+/* Style table headers and cells */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px; /* Smaller padding to fit more content */
+    text-align: center;
+    font-size: 16px; /* Adjust font size for better fit */
+    word-wrap: break-word; /* Wrap text within cells */
+}
+
+/* Header and footer styling */
+th {
+    background-color: #34495E; /* Dark navy color for headers */
+    color: white; /* White text for contrast */
+    font-weight: 600;
+}
+
+tfoot td {
+    font-size: 16px;
+    font-weight: 600;
+    color: #34495E; /* Consistent footer text color */
+}
+
+
+/* Adjust table cell background colors */
+td {
+    background-color: #fafafa; /* Light gray for table cells */
+}
+
+td[contenteditable="true"], .materialInput {
+    background-color: #e3f16ab1; /* Light grey background for editable cells */
+}
+
+.materialInput {
+    background-color: #f0f0f0; /* Light grey background for input fields */
+}
+
+tfoot td#totalSum {
+    background-color: #24ff53; /* Professional gray for summary field */
+    color: black; /* White text for better readability */
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray on hover */
+}
+
+/* Buttons styling */
+#generateCSVBtn,
+#importExcelBtn {
+    position: fixed;
+    padding: 12px 24px; /* Larger padding for easier clicking */
+    background-color: #34495E; /* Navy color for buttons */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Fully rounded buttons */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+#generateCSVBtn {
+    right: 20px;
+    bottom: 20px;
+}
+
+#generateCSVBtn:hover {
+    background-color: #2C3E50; /* Slightly darker navy on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+#importExcelBtn {
+    left: 20px;
+    bottom: 20px;
+}
+
+#importExcelBtn:hover {
+    background-color: #2C3E50; /* Slightly darker navy on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%; /* Table takes full width on small screens */
+    }
+    
+    th, td {
+        font-size: 12px; /* Smaller font size for better fit */
+        padding: 6px; /* Reduced padding to fit content */
+    }
+    
+    h1#tableTitle {
+        font-size: 20px; /* Smaller font size for titles */
+        margin-left: 10px; /* Smaller margin for titles */
+    }
+}
